@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policia Federal</title>
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 0);
+        font: normal 14pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verificador de Passaporte</h1>
+    Digite sua nacionalidade:
+    <input type="name" name="txtpais" id="txtpais" />
+    <input type="button" value="Verificar" onclick="verificador()" />
+    <div id="res"></div>
+
+    <script>
+      function verificador() {
+        var pais = window.document.querySelector("input#txtpais");
+        var res = window.document.querySelector("div#res");
+        var pass = String(pais.value);
+        if (pass == "Brasil") {
+          res.innerHTML = "Você é <strong>brasileiro</strong>.";
+        } else {
+          res.innerHTML = "Você é <strong>estrangeiro</strong>.";
+        }
+      }
+    </script>
+  </body>
+</html>
